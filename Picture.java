@@ -78,6 +78,7 @@ public class Picture
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
+        sun2.changeColor("black");
     }
 
     /**
@@ -89,5 +90,6 @@ public class Picture
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
+        sun2.changeColor("blue");
     }
 }
