@@ -11,11 +11,13 @@
  */
 public class Picture
 {
+    private Square background;
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
+    private Person larry;
     private boolean drawn;
 
     /**
@@ -23,11 +25,13 @@ public class Picture
      */
     public Picture()
     {
+        background = new Square();
         wall = new Square();
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
         sun2 = new Circle();
+        larry = new Person();
         drawn = false;
     }
     
@@ -37,12 +41,19 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            background.changeColor("black");
+            background.changeSize(500);
+            background.moveHorizontal(-310);
+            background.moveVertical (-300);
+            background.makeVisible();
+            
+            wall.changeColor("blue");
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(120);
             wall.makeVisible();
             
-            window.changeColor("black");
+            window.changeColor("yellow");
             window.moveHorizontal(-120);
             window.moveVertical(40);
             window.changeSize(40);
@@ -66,6 +77,13 @@ public class Picture
             sun2.changeSize(20);
             sun2.makeVisible();
             drawn = true;
+            
+            larry.changeColor("red");
+            larry.changeSize(60,30);
+            larry.moveHorizontal(10);
+            larry.moveVertical(25);
+            larry.makeVisible();
+            drawn = true;
         }
     }
 
@@ -74,11 +92,13 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
-        sun2.changeColor("black");
+        background.changeColor("black");
+        wall.changeColor("white");
+        window.changeColor("black");
+        roof.changeColor("white");
+        sun.changeColor("white");
+        sun2.changeColor("white");
+        larry.changeColor("black");
     }
 
     /**
@@ -86,10 +106,12 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
+        background.changeColor("black");
+        wall.changeColor("blue");
+        window.changeColor("yellow");
         roof.changeColor("green");
         sun.changeColor("yellow");
         sun2.changeColor("blue");
+        larry.changeColor("red");
     }
 }

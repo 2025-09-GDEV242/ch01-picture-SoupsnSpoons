@@ -68,7 +68,7 @@ public class Person
      */
     public void moveUp()
     {
-        moveVertical(-20);
+        moveVertical(-10);
     }
 
     /**
@@ -76,7 +76,7 @@ public class Person
      */
     public void moveDown()
     {
-        moveVertical(20);
+        moveVertical(10);
     }
 
     /**
