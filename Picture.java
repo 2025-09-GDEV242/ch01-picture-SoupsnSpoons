@@ -11,10 +11,13 @@
  */
 public class Picture
 {
-    private Square background;
-    private Square wall;
+    private Square building;
+    private Square sky;
     private Square window;
-    private Triangle roof;
+    private Square window2;
+    private Square window3;
+    private Square window4;
+    private Square window5;
     private Circle sun;
     private Circle sun2;
     private Person larry;
@@ -25,10 +28,13 @@ public class Picture
      */
     public Picture()
     {
-        background = new Square();
-        wall = new Square();
+        building = new Square();
+        sky = new Square();
         window = new Square();
-        roof = new Triangle();  
+        window2 = new Square();
+        window3 = new Square();
+        window4 = new Square();
+        window5 = new Square();
         sun = new Circle();
         sun2 = new Circle();
         larry = new Person();
@@ -41,28 +47,50 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            background.changeColor("black");
-            background.changeSize(500);
-            background.moveHorizontal(-310);
-            background.moveVertical (-300);
-            background.makeVisible();
+            building.changeColor("black");
+            building.changeSize(500);
+            building.moveHorizontal(-310);
+            building.moveVertical (-300);
+            building.makeVisible();
             
-            wall.changeColor("blue");
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            //make sky color dark blue once you get the colors working
+            sky.changeColor("blue");
+            sky.moveHorizontal(-140);
+            sky.moveVertical(-120);
+            sky.changeSize(420);
+            sky.makeVisible();
             
             window.changeColor("yellow");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
+            window.moveHorizontal(-280);
+            window.moveVertical(-70);
+            window.changeSize(30);
             window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            
+            window2.changeColor("yellow");
+            window2.moveHorizontal(-200);
+            window2.moveVertical(-70);
+            window2.changeSize(30);
+            window2.makeVisible();
+            
+            //make window3 dark grey once you get the colors working
+            window3.changeColor("yellow");
+            window3.moveHorizontal(-280);
+            window3.moveVertical(0);
+            window3.changeSize(30);
+            window3.makeVisible();
+            
+            window4.changeColor("yellow");
+            window4.moveHorizontal(-200);
+            window4.moveVertical(0);
+            window4.changeSize(30);
+            window4.makeVisible();
+            
+            //make window5 dark grey once you get the colors working
+            window5.changeColor("yellow");
+            window5.moveHorizontal(-280);
+            window5.moveVertical(70);
+            window5.changeSize(30);
+            window5.makeVisible();
     
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
@@ -71,16 +99,16 @@ public class Picture
             sun.makeVisible();
             drawn = true;
             
-            sun2.changeColor("blue");
+            sun2.changeColor("green");
             sun2.moveHorizontal(50);
             sun2.moveVertical(-40);
             sun2.changeSize(20);
             sun2.makeVisible();
             drawn = true;
             
-            larry.changeColor("red");
+            larry.changeColor("magenta");
             larry.changeSize(60,30);
-            larry.moveHorizontal(10);
+            larry.moveHorizontal(-30);
             larry.moveVertical(25);
             larry.makeVisible();
             drawn = true;
@@ -92,13 +120,16 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        background.changeColor("black");
-        wall.changeColor("white");
+        building.changeColor("white");
+        sky.changeColor("black");
         window.changeColor("black");
-        roof.changeColor("white");
+        window2.changeColor("black");
+        window3.changeColor("black");
+        window4.changeColor("black");
+        window5.changeColor("black");
         sun.changeColor("white");
         sun2.changeColor("white");
-        larry.changeColor("black");
+        larry.changeColor("white");
     }
 
     /**
@@ -106,12 +137,35 @@ public class Picture
      */
     public void setColor()
     {
-        background.changeColor("black");
-        wall.changeColor("blue");
+        building.changeColor("black");
+        //make sky color dark blue once you get the colors working
+        sky.changeColor("blue");
         window.changeColor("yellow");
-        roof.changeColor("green");
+        window2.changeColor("yellow");
+        //make window3 dark grey once you get the colors working
+        window3.changeColor("yellow");
+        window4.changeColor("yellow");
+        //make window5 dark grey once you get the colors working
+        window5.changeColor("yellow");
         sun.changeColor("yellow");
-        sun2.changeColor("blue");
-        larry.changeColor("red");
+        sun2.changeColor("green");
+        larry.changeColor("magenta");
     }
-}
+
+    /**
+     * adjust foreground colors
+     */
+    /*public void setForegroundColor(String colorString)
+    {
+        if (colorString.equals("red")){
+            graphic.setColor(new Color(235,25,25));
+        }
+        else if (colorString.equals("darkblue")){
+            graphic.setColor(new Color (18,15,85));
+        }
+        else if (colorString.equals("darkgrey")){
+            graphic.setColor(new Color (99,99,99));
+        }
+	}*/
+    }
+
