@@ -1,9 +1,7 @@
 /**
  * This is an image of a man coming home to his apartment after a long day.
- * Two windows are lit, the rest are dark, as most people are asleep at this time of night. 
+Two windows are lit, the rest are dark, as most people are asleep at this time of night. 
  * A single lamppost outside illuminates the apartment building.
- * 
- * This class was written as an early example for teaching Java with BlueJ.
  * 
  * @author  Arielle Bowie
  * @version September 22nd, 2025
@@ -20,8 +18,9 @@ public class Picture
     private Square window6;
     private Square door;
     private Square door2;
-    private Circle sun;
-    private Circle sun2;
+    private Circle light;
+    private Circle light2;
+    private Triangle lamppost;
     private Person larry;
     private boolean drawn;
 
@@ -40,8 +39,9 @@ public class Picture
         window6 = new Square();
         door = new Square();
         door2 = new Square();
-        sun = new Circle();
-        sun2 = new Circle();
+        light = new Circle();
+        light2 = new Circle();
+        lamppost = new Triangle();
         larry = new Person();
         drawn = false;
     }
@@ -59,7 +59,7 @@ public class Picture
             building.makeVisible();
             
             //make sky color dark blue once you get the colors working
-            sky.changeColor("blue");
+            sky.changeColor("darkblue");
             sky.moveHorizontal(-140);
             sky.moveVertical(-120);
             sky.changeSize(420);
@@ -71,14 +71,13 @@ public class Picture
             window.changeSize(30);
             window.makeVisible();
             
-            window2.changeColor("yellow");
+            window2.changeColor("darkgrey");
             window2.moveHorizontal(-200);
             window2.moveVertical(-90);
             window2.changeSize(30);
             window2.makeVisible();
             
-            //make window3 dark grey once you get the colors working
-            window3.changeColor("yellow");
+            window3.changeColor("darkgrey");
             window3.moveHorizontal(-280);
             window3.moveVertical(-20);
             window3.changeSize(30);
@@ -90,15 +89,13 @@ public class Picture
             window4.changeSize(30);
             window4.makeVisible();
             
-            //make window5 dark grey once you get the colors working
-            window5.changeColor("yellow");
+            window5.changeColor("darkgrey");
             window5.moveHorizontal(-280);
             window5.moveVertical(50);
             window5.changeSize(30);
             window5.makeVisible();
             
-            //make window6 dark grey once you get the colors working
-            window6.changeColor("yellow");
+            window6.changeColor("darkgrey");
             window6.moveHorizontal(-200);
             window6.moveVertical(50);
             window6.changeSize(30);
@@ -116,19 +113,25 @@ public class Picture
             door2.changeSize(30);
             door2.makeVisible();
     
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            light.changeColor("lightyellow");
+            light.moveHorizontal(110);
+            light.moveVertical(-40);
+            light.changeSize(60);
+            light.makeVisible();
             drawn = true;
             
-            sun2.changeColor("green");
-            sun2.moveHorizontal(50);
-            sun2.moveVertical(-40);
-            sun2.changeSize(20);
-            sun2.makeVisible();
+            light2.changeColor("yellow");
+            light2.moveHorizontal(130);
+            light2.moveVertical(-40);
+            light2.changeSize(20);
+            light2.makeVisible();
             drawn = true;
+            
+            lamppost.changeColor("red");
+            lamppost.moveHorizontal(160);
+            lamppost.moveVertical(-95);
+            lamppost.changeSize(10,60);
+            lamppost.makeVisible();
             
             larry.changeColor("magenta");
             larry.changeSize(60,30);
@@ -154,8 +157,9 @@ public class Picture
         window6.changeColor("black");
         door.changeColor("black");
         door2.changeColor("black");
-        sun.changeColor("white");
-        sun2.changeColor("white");
+        light.changeColor("white");
+        light2.changeColor("lightgrey");
+        lamppost.changeColor("white");
         larry.changeColor("white");
     }
 
@@ -165,42 +169,19 @@ public class Picture
     public void setColor()
     {
         building.changeColor("black");
-        //make sky color dark blue once you get the colors working
-        sky.changeColor("blue");
+        sky.changeColor("darkblue");
         window.changeColor("yellow");
-        //make window2 dark grey once you get the colors working
-        window2.changeColor("yellow");
-        //make window3 dark grey once you get the colors working
-        window3.changeColor("yellow");
+        window2.changeColor("darkgrey");
+        window3.changeColor("darkgrey");
         window4.changeColor("yellow");
-        //make window5 dark grey once you get the colors working
-        window5.changeColor("yellow");
-        //make window6 dark grey once you get the colors working
-        window6.changeColor("yellow");
+        window5.changeColor("darkgrey");
+        window6.changeColor("darkgrey");
         door.changeColor("white");
         door2.changeColor("white");
-        sun.changeColor("yellow");
-        sun2.changeColor("green");
+        light.changeColor("lightyellow");
+        light2.changeColor("yellow");
+        lamppost.changeColor("red");
         larry.changeColor("magenta");
     }
-
-    /**
-     * adjust foreground colors
-     */
-    /*public void setForegroundColor(String colorString)
-    {
-        if (colorString.equals("red")){
-            graphic.setColor(new.Color(235,25,25));
-        }
-        else if (colorString.equals("darkblue")){
-            graphic.setColor(new.Color(18,15,85));
-        }
-        else if (colorString.equals("darkgrey")){
-            graphic.setColor(new.Color(99,99,99));
-        }
-        else if (colorString.equals("lightgrey")){
-            graphic.setColor(new.Color(190,190,190));
-        }
-    }*/
     }
 
