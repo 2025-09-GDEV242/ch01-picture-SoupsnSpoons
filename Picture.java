@@ -1,7 +1,7 @@
 /**
  * This is an image of a man coming home to his apartment after a long day.
 Two windows are lit, the rest are dark, as most people are asleep at this time of night. 
- * A single lamppost outside illuminates the apartment building.
+ * A single lamppost outside illuminates the apartment building. Someone is in one of the windows, looking out.
  * 
  * @author  Arielle Bowie
  * @version September 22nd, 2025
@@ -18,10 +18,15 @@ public class Picture
     private Square window6;
     private Square door;
     private Square door2;
+    private Square beam;
+    private Square beam2;
+    private Square blocker;
+    private Square blocker2;
     private Circle light;
     private Circle light2;
     private Triangle lamppost;
     private Person larry;
+    private Person unknown;
     private boolean drawn;
 
     /**
@@ -39,10 +44,15 @@ public class Picture
         window6 = new Square();
         door = new Square();
         door2 = new Square();
+        beam = new Square();
+        beam2 = new Square();
+        blocker = new Square();
+        blocker2 = new Square();
         light = new Circle();
         light2 = new Circle();
         lamppost = new Triangle();
         larry = new Person();
+        unknown = new Person();
         drawn = false;
     }
     
@@ -101,13 +111,13 @@ public class Picture
             window6.changeSize(30);
             window6.makeVisible();
             
-            door.changeColor("white");
+            door.changeColor("darkgrey");
             door.moveHorizontal(-240);
             door.moveVertical(110);
             door.changeSize(30);
             door.makeVisible();
             
-            door2.changeColor("white");
+            door2.changeColor("darkgrey");
             door2.moveHorizontal(-240);
             door2.moveVertical(140);
             door2.changeSize(30);
@@ -127,17 +137,48 @@ public class Picture
             light2.makeVisible();
             drawn = true;
             
+            beam.changeColor("white");
+            beam.moveHorizontal(60);
+            beam.moveVertical(-135);
+            beam.changeSize(60);
+            beam.makeVisible();
+            
+            blocker.changeColor("darkblue");
+            blocker.moveHorizontal(60);
+            blocker.moveVertical(-140);
+            blocker.changeSize(60);
+            blocker.makeVisible();
+            
+            beam2.changeColor("white");
+            beam2.moveHorizontal(120);
+            beam2.moveVertical(-80);
+            beam2.changeSize(300);
+            beam2.makeVisible();
+            
+            blocker2.changeColor("darkblue");
+            blocker2.moveHorizontal(125);
+            blocker2.moveVertical(-80);
+            blocker2.changeSize(300);
+            blocker2.makeVisible();
+            
             lamppost.changeColor("red");
             lamppost.moveHorizontal(160);
             lamppost.moveVertical(-95);
             lamppost.changeSize(10,60);
             lamppost.makeVisible();
             
-            larry.changeColor("magenta");
+            larry.changeColor("skin");
             larry.changeSize(60,30);
             larry.moveHorizontal(-30);
             larry.moveVertical(60);
             larry.makeVisible();
+            drawn = true;
+            
+            unknown.changeColor("black");
+            unknown.moveHorizontal(-235);
+            unknown.moveVertical(-145);
+            unknown.changeSize(40,20);
+            unknown.makeVisible();
             drawn = true;
         }
     }
@@ -149,10 +190,10 @@ public class Picture
     {
         building.changeColor("white");
         sky.changeColor("black");
-        window.changeColor("black");
+        window.changeColor("lightgrey");
         window2.changeColor("black");
         window3.changeColor("black");
-        window4.changeColor("black");
+        window4.changeColor("lightgrey");
         window5.changeColor("black");
         window6.changeColor("black");
         door.changeColor("black");
@@ -160,7 +201,12 @@ public class Picture
         light.changeColor("white");
         light2.changeColor("lightgrey");
         lamppost.changeColor("white");
+        beam.changeColor("white");
+        beam2.changeColor("white");
+        blocker.changeColor("black");
+        blocker2.changeColor("black");
         larry.changeColor("white");
+        unknown.changeColor("white");
     }
 
     /**
@@ -176,12 +222,17 @@ public class Picture
         window4.changeColor("yellow");
         window5.changeColor("darkgrey");
         window6.changeColor("darkgrey");
-        door.changeColor("white");
-        door2.changeColor("white");
+        door.changeColor("darkgrey");
+        door2.changeColor("darkgrey");
         light.changeColor("lightyellow");
         light2.changeColor("yellow");
         lamppost.changeColor("red");
-        larry.changeColor("magenta");
+        beam.changeColor("white");
+        beam2.changeColor("white");
+        blocker.changeColor("darkblue");
+        blocker2.changeColor("darkblue");
+        larry.changeColor("skin");
+        unknown.changeColor("black");
     }
     }
 

@@ -140,6 +140,9 @@ public class Canvas
         else if(colorString.equals("lightyellow")){
             graphic.setColor(new Color(242, 255, 164));
         }
+        else if(colorString.equals("skin")){
+            graphic.setColor(new Color(211, 180, 138));
+        }
         else if(colorString.equals("green")) {
             graphic.setColor(new Color(80, 160, 60));
         }
